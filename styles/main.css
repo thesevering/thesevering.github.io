@@ -18,6 +18,11 @@ header {
     max-width: 200px;
     height: auto;
     margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.logo:hover {
+    opacity: 0.8;
 }
 
 nav ul {
@@ -25,6 +30,13 @@ nav ul {
     padding: 0;
     display: flex;
     gap: 15px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
 
 nav a {
@@ -40,4 +52,19 @@ nav a:hover {
 main {
     text-align: center;
     padding: 50px;
+}
+
+/* Lightning effect styles */
+.lightning {
+    position: absolute;
+    width: 5px;
+    height: 100px;
+    background: linear-gradient(to bottom, white, transparent);
+    opacity: 0.8;
+    animation: flicker 0.5s ease-out;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 0.2; }
 }
