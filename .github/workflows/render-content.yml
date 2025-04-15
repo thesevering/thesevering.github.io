@@ -1,0 +1,42 @@
+name: Render Content
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  render-content:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Render News Content
+      run: node scripts/render-news.js
+
+    - name: Render Bandinfo Content
+      run: node scripts/render-bandinfo.js
+
+    - name: Render Navigation
+      run: node scripts/render-navigation.js
+
+    - name: Render Logo
+      run: node scripts/render-logo.js
+
+    - name: Commit and Push Changes
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        git add .
+        git commit -m 'Update rendered content'
+        git push
