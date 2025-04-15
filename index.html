@@ -8,23 +8,46 @@
     <script src="scripts/lightning-effect.js"></script>
 </head>
 <body>
-    <header>
-        <img src="/images/sev_logo.png" alt="The Severing Logo" class="logo">
-        
-<nav>
+    <header><div class="burger-menu" onclick="toggleMenu()" >
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<nav class="burger-nav">
     <ul>
-        <li><a href="index.html">Home</a></li>
         <li><a href="news-rendered.html">News</a></li>
-        <li><a href="bandinfo-rendered.html">Bandinfo</a></li>
-        <li><a href="dates.html">Dates</a></li>
-        <li><a href="music.html">Music</a></li>
-        <li><a href="videos.html">Videos</a></li>
-        <li><a href="pictures.html">Pictures</a></li>
+        <li><a href="bandinfo-rendered.html">Info</a></li>
+        <li><a href="dates-rendered.html">Dates</a></li>
+        <li><a href="music-rendered.html">Music</a></li>
+        <li><a href="videos-rendered.html">Videos</a></li>
+        <li><a href="pictures-rendered.html">Pictures</a></li>
     </ul>
 </nav>
-    </header>
+<script>
+    function toggleMenu() {
+        const nav = document.querySelector('.burger-nav');
+        nav.classList.toggle('open');
+    }
+</script><a href="index.html"><img src="/images/sev_logo.png" alt="The Severing Logo" class="logo"></a>
+<nav class="normal-nav">
+    <ul>        
+        <li><a href="news-rendered.html">News</a></li>
+        <li><a href="bandinfo-rendered.html">Info</a></li>
+        <li><a href="dates-rendered.html">Dates</a></li>
+        <li><a href="music-rendered.html">Music</a></li>
+        <li><a href="videos-rendered.html">Videos</a></li>
+        <li><a href="pictures-rendered.html">Pictures</a></li>
+    </ul>
+</nav></header>
     <main>
-        
+        <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+            <img src="images/band_floor_small.png" alt="Band Floor" style="
+                transform: rotate(-6deg);
+                max-width: 66%;
+                border: 5px solid white;
+                box-sizing: border-box;">
+        </div>
     </main>
+ 
 </body>
 </html>

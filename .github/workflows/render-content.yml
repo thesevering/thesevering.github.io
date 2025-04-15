@@ -20,18 +20,21 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-
+    
+    - name: Render Navigation
+      run: node scripts/render-navigation.js
+      
     - name: Render News Content
       run: node scripts/render-news.js
 
     - name: Render Bandinfo Content
       run: node scripts/render-bandinfo.js
 
-    - name: Render Navigation
-      run: node scripts/render-navigation.js
 
-    - name: Render Logo
-      run: node scripts/render-logo.js
+    
+
+    - name: Render Other Pages
+      run: node serverside-scripts/render-other-pages.js
 
     - name: Commit and Push Changes
       run: |

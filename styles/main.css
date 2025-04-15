@@ -4,6 +4,7 @@ body {
     padding: 0;
     background-color: #121212;
     color: #ffffff;
+    overflow-x: hidden;
 }
 
 header {
@@ -25,6 +26,19 @@ header {
     opacity: 0.8;
 }
 
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: max-height 0.3s ease;
+    overflow: hidden;
+    max-height: 0;
+}
+
+nav.open {
+    max-height: 500px; /* Adjust as needed */
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -36,6 +50,36 @@ nav ul {
     nav ul {
         flex-direction: column;
         gap: 10px;
+    }
+    .burger-menu {
+        display: block;
+    }
+    .normal-nav {
+        display: none;
+
+    }
+    .burger-menu-button {
+        display: block;
+    }
+}
+
+@media (min-width: 768px) {
+    .normal-nav {
+        display: flex;
+    }
+ 
+    .burger-menu {
+        display: none;
+    }
+
+    .burger-nav {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        max-height: none;
     }
 }
 
@@ -51,7 +95,27 @@ nav a:hover {
 
 main {
     text-align: center;
-    padding: 50px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Burger menu styles */
+.burger-menu {
+    
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.burger-menu div {
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+    margin: 5px 0;
 }
 
 /* Lightning effect styles */
