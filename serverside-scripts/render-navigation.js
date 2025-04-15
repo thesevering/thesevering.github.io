@@ -4,8 +4,7 @@ const path = require('path');
 const navigationTemplate = `
 <nav>
     <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="news-rendered.html">News</a></li>
+                <li><a href="news-rendered.html">News</a></li>
         <li><a href="bandinfo-rendered.html">Info</a></li>
         <li><a href="dates.html">Dates</a></li>
         <li><a href="music.html">Music</a></li>

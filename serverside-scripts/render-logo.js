@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const logoTemplate = '<img src="/images/sev_logo.png" alt="The Severing Logo" class="logo">';
+const logoTemplate = '<a href="index.html"><img src="/images/sev_logo.png" alt="The Severing Logo" class="logo"></a>';
 
 const pages = [
     'index.html',
